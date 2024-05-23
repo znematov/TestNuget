@@ -2,7 +2,9 @@ name: publish_nuget
 on:
   workflow_dispatch: # Allow running the workflow manually from the GitHub UI
 env:
+  PROJECT_PATH: 'TestNuget/TestNuget.csproj'
   NuGetDirectory: ${{ github.workspace}}/nuget
+  NUGET_SOURCE_URL: https://api.nuget.org/v3/index.json
 
 jobs:
   create_nuget:
@@ -45,5 +47,5 @@ jobs:
       - name: Publish NuGet package
         run: |
           foreach($file in (Get-ChildItem "${{ env.NuGetDirectory }}" -Recurse -Include *.nupkg)) {
-              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source https://api.nuget.org/v3/index.json --skip-duplicate
+              dotnet nuget push $file --api-key "${{ secrets.NUGET_APIKEY }}" --source ${{env.NUGET_SOURCE_URL}} --skip-duplicate
           }
