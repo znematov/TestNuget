@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("A long description to explain your package")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2db1a0484ae52b1c1c4e9026fc2faa2cebd07c7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+329e66bfb56fcebd93710f4223fce7294a5e9b18")]
 [assembly: System.Reflection.AssemblyProductAttribute("TestNuget")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TestNuget")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
